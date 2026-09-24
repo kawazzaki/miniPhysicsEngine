@@ -19,7 +19,24 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="external\imgui\backend\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="external\imgui\backend\imgui_impl_sdl3.cpp" />
+    <ClCompile Include="external\imgui\imgui.cpp" />
+    <ClCompile Include="external\imgui\imgui_demo.cpp" />
+    <ClCompile Include="external\imgui\imgui_draw.cpp" />
+    <ClCompile Include="external\imgui\imgui_tables.cpp" />
+    <ClCompile Include="external\imgui\imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Objects\Square.cpp" />
+    <ClCompile Include="Physics\PhysicsBody2D.cpp" />
+    <ClCompile Include="Physics\PhysicsWorld2D.cpp" />
+    <ClCompile Include="Rendering\Renderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Objects\Square.h" />
+    <ClInclude Include="Physics\PhysicsBody2D.h" />
+    <ClInclude Include="Physics\PhysicsWorld2D.h" />
+    <ClInclude Include="Rendering\Renderer.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -95,6 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,6 +128,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,6 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,6 +160,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui\backend;C:\Users\Reda\source\repos\mini physics Engine\mini physics Engine\external\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
