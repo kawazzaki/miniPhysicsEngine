@@ -1,0 +1,4 @@
+﻿  main.cpp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+glew32s.lib(glew.obj) : warning LNK4099: PDB 'glew32s.pdb' was not found with 'glew32s.lib(glew.obj)' or at 'C:\Users\Reda\source\repos\mini physics Engine\Debug\glew32s.pdb'; linking object as if no debug info
+  mini physics Engine.vcxproj -> C:\Users\Reda\source\repos\mini physics Engine\Debug\mini physics Engine.exe
