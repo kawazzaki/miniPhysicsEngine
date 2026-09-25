@@ -13,6 +13,8 @@
 #include "Rendering/Renderer.h"
 #include "Objects/Square.h"
 
+#include "Physics/PhysicsWorld2D.h"
+
 #pragma comment(lib,"SDL3.lib")
 #pragma comment(lib,"glew32s.lib")
 #pragma comment(lib,"opengl32.lib")
@@ -52,6 +54,10 @@ int main(int argc, char* argv[]) {
 	square.size = 1.0f;
 	square.color = { 0.9f, 0.4f, 0.2f };
 
+
+	PhysicsWorld2D world;
+	world.addBody(&square.body);
+
 	bool running = true;
 	Uint64 lastTicks = SDL_GetTicksNS();
 	while (running) {
@@ -64,6 +70,9 @@ int main(int argc, char* argv[]) {
 		Uint64 nowTicks = SDL_GetTicksNS();
 		float dt = (float)(nowTicks - lastTicks) / 1e9f;
 		lastTicks = nowTicks;
+
+		world.step(dt);
+
 		(void)dt;
 		int w, h;
 		SDL_GetWindowSizeInPixels(window, &w, &h);
@@ -75,6 +84,7 @@ int main(int argc, char* argv[]) {
 		ImGui::NewFrame();
 
 		ImGui::Begin("Debug");
+		ImGui::Text("Velocity: (%.2f, %.2f)", square.body.velocity.x, square.body.velocity.y);
 		ImGui::DragFloat2("Position", &square.body.position.x, 0.05f);
 		ImGui::DragFloat("Size", &square.size, 0.05f, 0.1f, 5.0f);
 		ImGui::ColorEdit3("Color", &square.color.x);

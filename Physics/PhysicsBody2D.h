@@ -11,4 +11,9 @@ struct PhysicsBody2D {
 	glm::vec2 velocity{ 0.0f };
 	glm::vec2 acceleration{ 0.0f };
 	float mass = 1.0f;
+
+	void integrate(float dt) {
+		velocity += acceleration * dt;
+		position += velocity * dt;
+	}
 };
